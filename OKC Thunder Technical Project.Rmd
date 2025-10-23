@@ -48,9 +48,7 @@ htmltools::img(src = 'https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.sv
 
 # Introduction  
 
-The purpose of this project is to gauge your technical skills and problem solving ability by working through something similar to a real NBA data science project. You will work your way through this R Markdown document, answering questions as you go along. Please begin by adding your name to the "author" key in the YAML header. When you're finished with the document, come back and type your answers into the answer key at the top. Please leave all your work below and have your answers where indicated below as well. Please note that we will be reviewing your code so make it clear, concise, and **avoid long printouts.** Feel free to add in as many new code chunks as you'd like.
-
-Remember that we will be grading the quality of your code and visuals alongside the correctness of your answers. Please try to use the tidyverse as much as possible (instead of base R and explicit loops). Please do not bring in any outside data, and use the provided data as truth (for example, some "home" games have been played at secondary locations, including TOR's entire 2020-21 season. These are not reflected in the data and you do not need to account for this.) Note that the OKC and DEN 2024-25 schedules in `schedule_24_partial.csv` intentionally include only 80 games, as the league holds 2 games out for each team in the middle of December due to unknown NBA Cup matchups. Do not assign specific games to fill those two slots.      
+All provided data has been presumed as truth (for example, some "home" games have been played at secondary locations, including TOR's entire 2020-21 season. These are not reflected in the data and I was told not to account for this.) Note that the OKC and DEN 2024-25 schedules in `schedule_24_partial.csv` intentionally include only 80 games, as the league holds 2 games out for each team in the middle of December due to unknown NBA Cup matchups. I was told not to assign specific games to fill those two slots.      
 
 **Note:**    
 
@@ -69,7 +67,7 @@ Remember that we will be grading the quality of your code and visuals alongside 
 - Most 4-in-6 stretches on average: CHA (27.7)    
 - Fewest 4-in-6 stretches on average: NOP (21.8)       
 
-**Question 4:** This is a written question. Please leave your response in the document under Question 4.          
+**Question 4:** This is a written question. Response is in the document under Question 4.          
 
 **Question 5:**   
 
@@ -78,7 +76,7 @@ Remember that we will be grading the quality of your code and visuals alongside 
 
 ## Part 2  
 
-Please show your work in the document, you don't need anything here.     
+Work is shown in the document.     
 
 ## Part 3    
  
@@ -91,8 +89,7 @@ Please show your work in the document, you don't need anything here.
 
 ```{r load data, message = F, warning = F}
 library(tidyverse)
-# Note, you will likely have to change these paths. If your data is in the same folder as this project, 
-# the paths will likely be fixed for you by deleting ../../Data/schedule_project/ from each string.
+
 schedule <- read_csv("C:/Users/elias/Downloads/Technical Project OKC/schedule.csv")
 draft_schedule <- read_csv("C:/Users/elias/Downloads/Technical Project OKC/schedule_24_partial.csv")
 locations <- read_csv("C:/Users/elias/Downloads/Technical Project OKC/locations.csv")
@@ -108,9 +105,6 @@ In this section, you're going to work to answer questions using NBA scheduling d
 **QUESTION:** How many times are the Thunder scheduled to play 4 games in 6 nights in the provided 80-game draft of the 2024-25 season schedule? (Note: clarification, the stretches can overlap, the question is really “How many games are the 4th game played over the past 6 nights?”)     
   
 
-```{r}
-# Here and for all future questions, feel free to add as many code chunks as you like. Do NOT put echo = F though, we'll want to see your code.
-```
 
 #### Number of 4-in-6 Stretches
 ```{r}
